@@ -268,14 +268,146 @@ span{
 
 }
 
+.work{
+    background-color: black;
+    padding: 6rem 9%;
+    text-align: center;
+}
 
 
+.work .heading{
+    font-size: 4rem;
+    margin-bottom: 4rem;
+}
+
+.work-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.work-card{
+    background-color: #111;
+    border: 2px solid blueviolet;
+    border-radius: 2rem;
+    padding: 2rem;
+    width: 300px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 15px rgba(138,43,226,0.3);
+}
+
+.work-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px blueviolet;
+}
+
+.work-card img{
+    width: 100%;
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.work-card h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.work-card .work-desc {
+    font-size: 1.4rem;
+    color: #ccc;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .work .see-more {
+    display: inline-block;
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    padding: 1rem 3rem;
+    background-color: black;
+    color: blueviolet;
+    border: 2px solid blueviolet;
+    border-radius: 4rem;
+    transition: 0.3s ease;
+  }
+  
+  .work .see-more:hover {
+    background-color: blueviolet;
+    color: black;
+    box-shadow: 0 0 25px blueviolet;
+    transform: scale(1.05);
+  }
 
 
-
-
-
-
-
-
-
+  footer {
+    background: linear-gradient(270deg, #111, black); /* gradient */
+    background-size: 600% 600%;
+    color: #ccc;
+    padding: 3rem 9%;
+    text-align: center;
+    border-top: 1px solid blueviolet;
+    animation: footerWave 20s ease infinite;
+  }
+  
+  @keyframes footerWave {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+  }
+  
+  /* Sociálne ikony */
+  footer .footer-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid blueviolet;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 0rem 1.5rem 0rem;
+    transition: 0.3s ease;
+    color: blueviolet;
+  }
+  
+  footer .footer-icons a:hover {
+    color:black;
+    transform: scale(1.3)translateY(-5px);
+    background-color: blueviolet;
+    box-shadow: 0 0 25px blueviolet;
+  }
+  
+  /* Navigačné odkazy */
+  footer .footer-nav {
+    margin: 1.5rem 0;
+  }
+  
+  footer .footer-nav a {
+    filter: drop-shadow(0 0 10px blueviolet);
+    font-size: 1.8rem;
+    color: blueviolet;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    box-shadow: inset;
+  }
+  
+  footer .footer-nav a:hover {
+        color: white;
+        padding: 1rem;
+        border-radius: 0.4rem;
+        border-bottom: 0.4rem solid white;
+  }
+  
+  /* Copyright */
+  footer .footer-copy {
+    font-size: 1.3rem;
+    color: blueviolet;
+    margin-top: 1rem;
+  }
