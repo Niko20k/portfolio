@@ -13,6 +13,7 @@
 
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -124,6 +125,10 @@ span{
     font-size: 4rem;
     margin-bottom: 1rem;
     font-weight: 700;
+}
+.home-content p{
+    font-size: 1.5rem;
+
 }
 .home-img{
     border-radius: 50%;
@@ -341,6 +346,67 @@ span{
     box-shadow: 0 0 25px blueviolet;
     transform: scale(1.05);
   }
+  .work-card .work-desc-full {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+
+.work-card.expanded {
+    width: 600px; 
+}
+
+.work-card.expanded .work-desc-full {
+    max-height: 500px; 
+    opacity: 1;
+}
+
+
+.work-links {
+    margin-top: 1rem;
+}
+
+.work-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: black;
+    color: blueviolet;
+    border: 2px solid blueviolet;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.work-icon-btn i {
+    font-size: 1.8rem;
+}
+
+.work-icon-btn:hover {
+    background-color: blueviolet;
+    color: black;
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 0 15px blueviolet;
+}
+
+.expand-arrow {
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: blueviolet;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .work-card.expanded .expand-arrow i {
+    transform: rotate(180deg); /* otočenie šípky hore */
+  }
 
 
   footer {
@@ -411,3 +477,229 @@ span{
     color: blueviolet;
     margin-top: 1rem;
   }
+
+  .skills {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 8rem 9%;
+  }
+  
+  .skills .heading {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+  }
+  
+  .skills .heading span {
+    color: blueviolet;
+  }
+  
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+  }
+  
+  .skill-box {
+    background-color: #111;
+    border: 2px solid blueviolet;
+    border-radius: 2rem;
+    padding: 3rem 2rem;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.2);
+  }
+  
+  .skill-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px blueviolet;
+  }
+  
+  .skill-box i {
+    font-size: 4rem;
+    color: blueviolet;
+    margin-bottom: 1.5rem;
+  }
+  
+  .skill-box h3 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .skill-box p {
+    font-size: 1.4rem;
+    color: #ccc;
+  }
+
+  .about {
+    background-color: #000;
+    color: #fff;
+    padding: 8rem 9%;
+  }
+  
+  .about .heading {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 5rem;
+  }
+  
+  .about .heading span {
+    color: blueviolet;
+  }
+  
+  .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    flex-wrap: wrap;
+  }
+  
+  .about-img img {
+    width: 350px;
+    border-radius: 2rem;
+    box-shadow: 0 0 25px blueviolet;
+    transition: 0.3s ease;
+  }
+  
+  .about-img img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px blueviolet;
+  }
+  
+  .about-content {
+    max-width: 600px;
+  }
+  
+  .about-content h3 {
+    font-size: 3rem;
+    color: blueviolet;
+    margin-bottom: 2rem;
+  }
+  
+  .about-content p {
+    font-size: 1.6rem;
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+  
+  .about-content .btn {
+    background-color: transparent;
+    color: blueviolet;
+    border: 2px solid blueviolet;
+    transition: 0.3s ease;
+  }
+  
+  .about-content .btn:hover {
+    background-color: blueviolet;
+    color: black;
+    box-shadow: 0 0 25px blueviolet;
+  }
+  
+  .contact {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5rem 9%;
+  }
+  
+  .contact .heading {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+  
+  .contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .input-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .input-box input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    border: 2px solid blueviolet;
+    border-radius: 1rem;
+    background-color: transparent;
+    color: white;
+    font-size: 1.6rem;
+    transition: 0.3s ease;
+  }
+  
+  .input-box input:focus,
+  .contact-form textarea:focus {
+    box-shadow: 0 0 15px blueviolet;
+    border-color: blueviolet;
+  }
+  
+  .contact-form textarea {
+    resize: none;
+  }
+  
+  .contact-form .btn {
+    align-self: center;
+    width: fit-content;
+  }
+  
+
+  .form-status {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    opacity: 0;             
+    transform: translateY(-10px); 
+    transition: all 0.5s ease;    
+  }
+  
+  
+  .form-status.show {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+
+
+ 
+  .bubbles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .bubbles span {
+    position: absolute;
+    bottom: -50px;
+    background-color: rgba(138,43,226,0.2);
+    border-radius: 50%;
+    animation-name: rise;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes rise {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateY(-1100px) scale(0.5);
+      opacity: 0;
+    }
+  }
+  
+  
